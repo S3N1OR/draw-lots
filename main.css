@@ -1,0 +1,100 @@
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'Comfortaa', sans-serif;
+    background: rgb(86, 86, 86);
+    user-select: none;
+}
+.wrapper{
+    padding: 5vmin;
+}
+.box{
+    width: 60vmin;
+    height: 7vmin;
+    color: #c3c3c3;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5vmin;
+    cursor: pointer;
+    border-radius: 1.5vmin;
+    --opacity: 1;
+    -webkit-box-shadow: 0px 0px 1vmin 0px rgba(0, 0, 0, var(--opacity));
+    -moz-box-shadow: 0px 0px 1vmin 0px rgba(0, 0, 0, var(--opacity));
+    box-shadow: 0px 0px 1vmin 0px rgba(0, 0, 0, var(--opacity));
+    background: rgb(34,34,34);
+    background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(20,20,20,1) 100%);
+}
+.box:active{
+    transition: all 0.2s ease;
+    transform: scale(0.95);
+}
+#boxes{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vmin;
+}
+#prizes{
+
+}
+textarea{
+    width: 100%;
+    height: 50vmin;
+    background-color: #929292;
+    border-radius: 2vmin;
+    --opacity: 0.4;
+    -webkit-box-shadow: 0px 0px 1vmin 0px rgba(0, 0, 0, var(--opacity));
+    -moz-box-shadow: 0px 0px 1vmin 0px rgba(0, 0, 0, var(--opacity));
+    box-shadow: 0px 0px 1vmin 0px rgba(0, 0, 0, var(--opacity));
+    padding: 1vmin;
+    font-size: 1.5vmin;
+}
+.shuffleBtn{
+    width: 30vmin;
+    font-size: 2.5vmin;
+    height: 15vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3vmin auto;
+    border-radius: 3vmin;
+    background-color: #4989bd;
+    --opacity: 0.4;
+    -webkit-box-shadow: 0px 0px 1vmin 0px rgba(0, 0, 0, var(--opacity));
+    -moz-box-shadow: 0px 0px 1vmin 0px rgba(0, 0, 0, var(--opacity));
+    box-shadow: 0px 0px 1vmin 0px rgba(0, 0, 0, var(--opacity));
+    transition: all 0.2s ease;
+}
+.shuffleBtn:active{
+    transform: scale(0.95);
+}
+.hide-show{
+    width: 3.5vmin;
+    height: 3.5vmin;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3vmin 0 3vmin auto;
+    --opacity: 1;
+    -webkit-box-shadow: 0px 0px 1vmin 0px rgba(0, 0, 0, var(--opacity));
+    -moz-box-shadow: 0px 0px 1vmin 0px rgba(0, 0, 0, var(--opacity));
+    box-shadow: 0px 0px 1vmin 0px rgba(0, 0, 0, var(--opacity));
+    transition: all 0.2s ease;
+}
+.hide-show:active{
+    transform: scale(0.95);
+}
+.eye{
+    width: 2.5vmin;
+    height: 2.5vmin;
+}
+
+.none{
+    display: none;
+}
