@@ -10,33 +10,37 @@
 </head>
 <body>
     <div class="wrapper">
+        <img src="deesloy-logo.png" alt="" class="logo">
         <div id="boxes">
-            <div class="box" onclick="showPrize(1)">Номер 1</div>
-            <div class="box" onclick="showPrize(2)">Номер 2</div>
-            <div class="box" onclick="showPrize(3)">Номер 3</div>
-            <div class="box" onclick="showPrize(4)">Номер 4</div>
-            <div class="box" onclick="showPrize(5)">Номер 5</div>
-            <div class="box" onclick="showPrize(6)">Номер 6</div>
-            <div class="box" onclick="showPrize(7)">Номер 7</div>
-            <div class="box" onclick="showPrize(8)">Номер 8</div>
-            <div class="box" onclick="showPrize(9)">Номер 9</div>
-            <div class="box" onclick="showPrize(10)">Номер 10</div>
-            <div class="box" onclick="showPrize(11)">Номер 11</div>
-            <div class="box" onclick="showPrize(12)">Номер 12</div>
-            <div class="box" onclick="showPrize(13)">Номер 13</div>
-            <div class="box" onclick="showPrize(14)">Номер 14</div>
-            <div class="box" onclick="showPrize(15)">Номер 15</div>
-            <div class="box" onclick="showPrize(16)">Номер 16</div>
-            <div class="box" onclick="showPrize(17)">Номер 17</div>
-            <div class="box" onclick="showPrize(18)">Номер 18</div>
-            <div class="box" onclick="showPrize(19)">Номер 19</div>
-            <div class="box" onclick="showPrize(20)">Номер 20</div>
+            <div class="box box-bg-hide" onclick="showPrize(1)"><div class="box-text">Номер 1</div></div>
+            <div class="box box-bg-hide" onclick="showPrize(2)"><div class="box-text">Номер 2</div></div>
+            <div class="box box-bg-hide" onclick="showPrize(3)"><div class="box-text">Номер 3</div></div>
+            <div class="box box-bg-hide" onclick="showPrize(4)"><div class="box-text">Номер 4</div></div>
+            <div class="box box-bg-hide" onclick="showPrize(5)"><div class="box-text">Номер 5</div></div>
+            <div class="box box-bg-hide" onclick="showPrize(6)"><div class="box-text">Номер 6</div></div>
+            <div class="box box-bg-hide" onclick="showPrize(7)"><div class="box-text">Номер 7</div></div>
+            <div class="box box-bg-hide" onclick="showPrize(8)"><div class="box-text">Номер 8</div></div>
+            <div class="box box-bg-hide" onclick="showPrize(9)"><div class="box-text">Номер 9</div></div>
+            <div class="box box-bg-hide" onclick="showPrize(10)"><div class="box-text">Номер 10</div></div>
+            <div class="box box-bg-hide" onclick="showPrize(11)"><div class="box-text">Номер 11</div></div>
+            <div class="box box-bg-hide" onclick="showPrize(12)"><div class="box-text">Номер 12</div></div>
+            <div class="box box-bg-hide" onclick="showPrize(13)"><div class="box-text">Номер 13</div></div>
+            <div class="box box-bg-hide" onclick="showPrize(14)"><div class="box-text">Номер 14</div></div>
+            <div class="box box-bg-hide" onclick="showPrize(15)"><div class="box-text">Номер 15</div></div>
+            <div class="box box-bg-hide" onclick="showPrize(16)"><div class="box-text">Номер 16</div></div>
+            <div class="box box-bg-hide" onclick="showPrize(17)"><div class="box-text">Номер 17</div></div>
+            <div class="box box-bg-hide" onclick="showPrize(18)"><div class="box-text">Номер 18</div></div>
+            <div class="box box-bg-hide" onclick="showPrize(19)"><div class="box-text">Номер 19</div></div>
+            <div class="box box-bg-hide" onclick="showPrize(20)"><div class="box-text">Номер 20</div></div>
         </div>
         <button onclick="hide_show();" class="hide-show"><img class="eye" src="eye.png" alt=""></button>
         <div id="prizes" class="none">
             <textarea id="prizesTextarea"></textarea>
-        </div>      
-        <button class="shuffleBtn" onclick="shufflePrizes()">Перемешать призы</button>
+        </div>
+        <div class="btns">
+            <button class="shuffleBtn" onclick="shufflePrizes()">Перемешать жребий</button>
+            <button class="openAllBtn" onclick="openAll()">Открыть всё</button>
+        </div>
     </div>
 
 

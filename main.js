@@ -9,28 +9,11 @@ function showPrize(boxNumber) {
     const prizeList = prizeTextarea.value.split('\n');
     const prize = prizeList[boxNumber - 1];
     const box = document.getElementById('boxes').children[boxNumber - 1];
-    box.innerText = prize;
+    const boxText = document.getElementsByClassName('box-text')[boxNumber -1];
+    boxText.innerText = prize;
+    box.classList.add('box-bg-show');
+    boxText.classList.add('op');
 }
-
-// setInterval(() => {
-//     updateLocalStorage();
-// }, 10);
-
-// function updatePrizes() {
-//   const prizeTextarea = document.getElementById('prizesTextarea');
-//   const prizeList = prizeTextarea.value.split('\n');
-//   if (prizeList.length > boxCount) {
-//     prizeList.splice(boxCount);
-//     prizeTextarea.value = prizeList.join('\n');
-//   } else if (prizeList.length < boxCount) {
-//     const diff = boxCount - prizeList.length;
-//     for (let i = 0; i < diff; i++) {
-//       prizeList.push('');
-//     }
-//     prizeTextarea.value = prizeList.join('\n');
-//     updateLocalStorage();
-//   }
-// }
 
 function shufflePrizes() {
     const prizeTextarea = document.getElementById('prizesTextarea');
@@ -40,48 +23,34 @@ function shufflePrizes() {
         [prizeList[i], prizeList[j]] = [prizeList[j], prizeList[i]];
     }
     prizeTextarea.value = prizeList.join('\n');
-    
-    // updateLocalStorage();
 }
-
-// function getPrizeList() {
-//     const prizeTextarea = document.getElementById('prizesTextarea');
-//     const prizeList = prizeTextarea.value.split('\n');
-//     return prizeList;
-// }
-
-// function updateLocalStorage() {
-//     localStorage.setItem('prizeList', JSON.stringify(getPrizeList()));
-// }
-
-// function loadFromLocalStorage() {
-//     const prizeList = JSON.parse(localStorage.getItem('prizeList')) || [];
-//     prizeList.forEach((prize, index) => {
-//         if (index === 0) {
-//             return;
-//         }
-//     addBox();
-//     });
-//     const prizeTextarea = document.getElementById('prizesTextarea');
-//     prizeTextarea.value = prizeList.join('\n');
-// }
 
 function hide_show(){
     const prizes = document.querySelector('#prizes');
-
     prizes.classList.toggle('none');
 }
+
+function openAll(){
+  var boxes = document.querySelectorAll(".box");
   
-// loadFromLocalStorage();
+  for (var i = 0; i < boxes.length; i++) {
+    const box = document.getElementById('boxes').children[i];
+    const prizeTextarea = document.getElementById('prizesTextarea');
+    const prizeList = prizeTextarea.value.split('\n');
+    const prize = prizeList[i];
+    boxes[i].innerText = prize;
+    box.classList.add('box-bg-show');
+  }
+}
 
 const prizesTextarea = document.getElementById("prizesTextarea");
+function savePrizes() {
+  localStorage.setItem("prizes", prizesTextarea.value);
+}
 
 if (localStorage.getItem("prizes")) {
   prizesTextarea.value = localStorage.getItem("prizes");
 }
 
-function savePrizes() {
-  localStorage.setItem("prizes", prizesTextarea.value);
-}
 
 prizesTextarea.addEventListener("input", savePrizes);
