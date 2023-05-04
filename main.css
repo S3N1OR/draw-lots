@@ -7,6 +7,7 @@ body{
     user-select: none;
     background-image: url('bg.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
 }
 .wrapper{
     padding: 5vmin;
