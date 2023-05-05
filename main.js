@@ -10,9 +10,9 @@ function showPrize(boxNumber) {
     const prize = prizeList[boxNumber - 1];
     const box = document.getElementById('boxes').children[boxNumber - 1];
     const boxText = document.getElementsByClassName('box-text')[boxNumber -1];
+    boxText.classList.add('op');
     boxText.innerText = prize;
     box.classList.add('box-bg-show');
-    boxText.classList.add('op');
 }
 
 function shufflePrizes() {
@@ -52,5 +52,10 @@ if (localStorage.getItem("prizes")) {
   prizesTextarea.value = localStorage.getItem("prizes");
 }
 
+function copy() {
+  var copyText = 'https://github.com/S3N1OR/draw-lots';
+
+  navigator.clipboard.writeText(copyText);
+}
 
 prizesTextarea.addEventListener("input", savePrizes);

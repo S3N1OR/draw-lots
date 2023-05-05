@@ -8,11 +8,37 @@ body{
     background-image: url('bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 .wrapper{
     padding: 5vmin;
     width: 150vmin;
     margin: 0 auto;
+}
+.source{
+    position: absolute;
+    top: -2vmin;
+    left: 1vmin;
+    font-size: 1.5vmin;
+    display: flex;
+    width: 30vmin;
+    height: 10vmin;
+    align-items: center;
+    line-height: 1;
+    opacity: 0.75;
+}
+.source a{
+    color: #ff0000;
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: underline;
+}
+.copy{
+    background-color: #2e2e2e51;
+    padding: 1vmin;
+    border-radius: 2vmin;
+    display: block;
+    margin-left: 2vmin;
 }
 .logo{
     display: block;
